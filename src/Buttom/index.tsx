@@ -2,8 +2,8 @@ import { ButtonNormal, ButtonLink } from './styles'
 
 type Props = {
   title: string
-  type: 'button' | 'link'
-  to: string
+  type: 'button' | 'link' | 'submit'
+  to?: string
   onClick?: () => void
   children: string
 }
@@ -16,6 +16,10 @@ const Button = ({ type, title, onClick, to, children }: Props) => {
       </ButtonNormal>
     )
   }
-  return <ButtonLink to={to as string}>{children}</ButtonLink>
+  return (
+    <ButtonLink to={to as string} onClick={onClick}>
+      {children}
+    </ButtonLink>
+  )
 }
 export default Button

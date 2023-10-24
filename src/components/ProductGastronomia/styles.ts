@@ -1,5 +1,6 @@
 import { styled } from 'styled-components'
 import { cores } from '../../styles'
+import Button from '../../Buttom'
 export const Container = styled.div`
   max-width: 1366px;
   width: 320px;
@@ -29,8 +30,10 @@ export const Container = styled.div`
       margin-left: 5px;
     }
   }
+  ${Button} {
+    width: 40px;
+  }
 `
-
 export const Title = styled.h2`
   font-size: 18px;
   font-weight: 700;

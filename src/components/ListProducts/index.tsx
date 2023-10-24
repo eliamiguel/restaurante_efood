@@ -1,28 +1,27 @@
 /* eslint-disable react/jsx-key */
 
 import Product from '../Product'
-import Pratos from '../models/Pratos'
 import { Container } from './styles'
+import { Gastronomia } from '../../pages/Home'
 
 export type Props = {
-  pratos: Pratos[]
+  restaurante: Gastronomia[]
 }
 
-const ListProducts = ({ pratos }: Props) => (
+const ListProducts = ({ restaurante }: Props) => (
   <>
     <Container>
-      {pratos.map((prat) => (
-        <Product
-          key={prat.id}
-          title={prat.title}
-          descricao={prat.descricao}
-          button={prat.button}
-          image={prat.image}
-          estrela={prat.estrela}
-          numeroEstrela={prat.numeroEstrela}
-          pais={prat.pais}
-          destaque={prat.destaque}
-        />
+      {restaurante.map((prat) => (
+        <li key={prat.id}>
+          <Product
+            title={prat.title}
+            descricao={prat.descricao}
+            image={prat.capa}
+            numeroEstrela={prat.avaliacao}
+            pais={prat.tipo}
+            destacado={prat.destacado}
+          />
+        </li>
       ))}
     </Container>
   </>

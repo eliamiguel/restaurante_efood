@@ -3,12 +3,14 @@ import { Link } from 'react-router-dom'
 import { cores } from '../styles'
 
 export const ButtonLink = styled(Link)`
-  font-weight: 700;
+  font-weight: bold;
+  width: 82px;
   font-size: 14px;
   text-align: center;
   padding: 5px;
   margin-left: 8px;
   border: none;
+  border-radius: 5px;
   color: ${cores.rosaClaro};
   background-color: ${cores.rosa};
 `
@@ -22,5 +24,6 @@ export const ButtonNormal = styled.button`
   font-weight: bold;
   border: none;
   color: ${cores.rosa};
+  border-radius: 5px;
   background-color: ${cores.rosaClaro};
 `

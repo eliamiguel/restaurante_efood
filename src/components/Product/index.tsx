@@ -1,4 +1,5 @@
 import Button from '../../Buttom'
+import estrela from '../../Assets/estrela.png'
 import {
   Container,
   Destaque,
@@ -11,43 +12,39 @@ import {
 export type Props = {
   title: string
   descricao: string
-  button: string
   image: string
-  estrela?: string
   numeroEstrela?: number
   pais?: string
-  destaque?: string
+  destacado: boolean
 }
 
 const Product = ({
   title,
   descricao,
   image,
-  button,
   numeroEstrela,
-  estrela,
-  destaque,
+  destacado,
   pais
 }: Props) => (
   <Container>
     <img src={image} alt="Sushi" />
     <ParagrafoTag>{pais}</ParagrafoTag>
-    {destaque === 'Destaque da semana' ? (
-      <Destaque>{destaque}</Destaque>
+    {destacado === true ? (
+      <Destaque>Destaque da semanna</Destaque>
     ) : (
       <SemDestaque></SemDestaque>
     )}
     <div>
       <Title>{title}</Title>
       <Title>
-        {numeroEstrela === 4.9 ? <span>{numeroEstrela}</span> : 4.6}{' '}
+        <span>{numeroEstrela}</span>
         <img src={estrela} alt="estrela" />
       </Title>
     </div>
     <Paragrafo>{descricao}</Paragrafo>
 
     <Button title="Clique aqui para saber mais" type="link" to="/Perfil">
-      {button}
+      Saiba mais
     </Button>
   </Container>
 )

@@ -1,8 +1,10 @@
 import styled from 'styled-components'
 import { cores } from '../../styles'
+import { Link } from 'react-router-dom'
 
-export const TagRestaurante = styled.p`
+export const TagRestaurante = styled(Link)`
   font-family: Roboto;
+  text-decoration: none;
   font-size: 18px;
   font-weight: 900;
   text-align: left;
@@ -11,6 +13,7 @@ export const TagRestaurante = styled.p`
 export const TagCarrinho = styled.p`
   font-family: Roboto;
   font-size: 18px;
+  text-decoration: none;
   font-weight: 900;
   text-align: right;
   color: ${cores.rosa};

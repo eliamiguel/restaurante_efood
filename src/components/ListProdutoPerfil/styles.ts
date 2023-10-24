@@ -1,7 +1,7 @@
 import { styled } from 'styled-components'
 import { cores } from '../../styles'
 
-export const Container1 = styled.div`
+export const Container1 = styled.ul`
   max-width: 1024px;
   width:100%
   height: 708px;
@@ -13,6 +13,11 @@ export const Container1 = styled.div`
   column-gap: 24px;
   row-gap: 24px;
   background-color: ${cores.rosaClaro};
+  img{
+    width:100%
+  height: 167px;
+  }
+
 `
 export const Div = styled.div`
   height: 280px;

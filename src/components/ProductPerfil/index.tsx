@@ -1,25 +1,25 @@
 import Button from '../../Buttom'
+import { Link } from 'react-router-dom'
 import { Container, Paragrafo, Title } from './styles'
 type Props = {
-  title: string
+  nome: string
   descricao: string
-  button: string
-  image: string
-  pais?: string
-  destaque?: string
+  foto: string
+  porcao?: string
+  preco?: number
 }
 
-const ProductPeril = ({ title, descricao, image, button }: Props) => (
+const ProductPeril = ({ nome, descricao, foto }: Props) => (
   <Container>
-    <img src={image} alt="Sushi" />
+    <img src={foto} alt="Sushi" />
 
     <div>
-      <Title>{title}</Title>
+      <Title>{nome}</Title>
     </div>
     <Paragrafo>{descricao}</Paragrafo>
 
-    <Button title="Adicionar no carrinho" type="button" to="/Perfil">
-      {button}
+    <Button title="Adicionar no carrinho" type="button" to="/Prats/1">
+      Adicionar ao carrinho
     </Button>
   </Container>
 )

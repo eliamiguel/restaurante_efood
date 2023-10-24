@@ -3,6 +3,7 @@ import { Imagem } from './styles'
 import logo from '../../Assets/logo.png'
 import { TagCarrinho, TagRestaurante } from './styles'
 import { Paragrafo } from '../../styles'
+
 export type Props = {
   style: CSSProperties
   restaura: string
@@ -13,12 +14,10 @@ const HeaderPerfil = ({ restaura, carrinho, paragrafo, style }: Props) => (
   <>
     <Imagem style={style}>
       <div>
-        <TagRestaurante>
-          <a href="#">{restaura}</a>
+        <TagRestaurante to="/">
+          <a href="/">{restaura}</a>
         </TagRestaurante>
-        <a href="/">
-          <img src={logo} alt="logo" />
-        </a>
+        <img src={logo} alt="logo" />
         <TagCarrinho>
           <a href="#">{carrinho}</a>
         </TagCarrinho>

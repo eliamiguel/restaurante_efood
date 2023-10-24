@@ -4,13 +4,17 @@ import { cores } from '../../styles'
 export const Container = styled.div`
   max-width: 1366px;
   width: 100%;
-  height: 398px;
+  height: 100%;
   padding-bottom: 10px;
   background-color: ${cores.branco};
-  border: 1px solid ${cores.rosa};
+  border: 2px solid ${cores.rosa};
   position: relative;
+  border-radius: 10px;
   > img {
     width: 100%;
+    height: 224px;
+    object-fit: cover;
+    border-radius: 10px;
   }
 
   div {
@@ -30,6 +34,7 @@ export const Container = styled.div`
 
 export const Title = styled.h2`
   font-size: 18px;
+  margin-bottom: 8px;
   font-weight: 700;
   color: ${cores.rosa};
   display: flex;
@@ -37,13 +42,19 @@ export const Title = styled.h2`
 `
 export const Paragrafo = styled.p`
   font-size: 14px;
+  max-width: 456px;
+  width: 100%;
+  height: 88px;
+  margin-bottom: 40px;
   font-weight: 400;
   line-height: 22px;
-  padding: 8px;
+
+  padding: 0 8px;
 `
 
 export const ParagrafoTag = styled.p`
   font-size: 12px;
+  border-radius: 5px;
   font-weight: bold;
   padding: 5px;
   height: 26px;
@@ -56,6 +67,7 @@ export const ParagrafoTag = styled.p`
 `
 export const Destaque = styled.p`
   font-size: 12px;
+  border-radius: 5px;
   font-weight: bold;
   width: 130px;
   padding: 5px;
@@ -63,7 +75,7 @@ export const Destaque = styled.p`
   display: inline-block;
   position: absolute;
   top: 16px;
-  right: 100px;
+  right: 90px;
   background-color: ${cores.rosa};
   color: ${cores.rosaClaro};
 `
