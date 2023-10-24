@@ -30,9 +30,6 @@ export const Container = styled.div`
       margin-left: 5px;
     }
   }
-  ${Button} {
-    width: 40px;
-  }
 `
 export const Title = styled.h2`
   font-size: 18px;
