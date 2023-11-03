@@ -4,15 +4,6 @@ import ListProducts from '../../components/ListProducts'
 import fundo from '../../Assets/fundo.svg'
 import Header from '../../components/Header'
 
-export type CardapioItem = {
-  foto: string
-  preco: number
-  id: number
-  nome: string
-  descricao: string
-  porcao: string
-}
-
 export type Restaurante = {
   image: string
   title: string
