@@ -22,7 +22,6 @@ const HeaderPerfil = ({ restaura, carrinho, paragrafo, style }: Props) => (
           <a href="#">{carrinho}</a>
         </TagCarrinho>
       </div>
-
       <Paragrafo>{paragrafo}</Paragrafo>
     </Imagem>
   </>

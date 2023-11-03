@@ -1,30 +1,27 @@
-import { Container1, Div, P1, P2 } from './styles'
+import { Container1 } from './styles'
 import ProductPerfil from '../ProductPerfil'
-import fundo2 from '../../Assets/perfil/imagemFundo.png'
-import { Gastronomia } from '../../pages/Home'
 
-export type Props = {
-  gastronomia: Gastronomia[]
-  header?: Gastronomia
+import { Restaurante } from '../../pages/Home'
+
+type Props = {
+  restaurante: Restaurante[]
 }
-const ListProdutoPerfil = ({ gastronomia }: Props) => (
-  <>
-    <Div style={{ backgroundImage: `url(${fundo2})` }}>
-      <P1>Italiana</P1>
-      <P2>La Dolce Vita Trattoria</P2>
-    </Div>
+
+const ListProdutoPerfil = ({ restaurante }: Props) => {
+  return (
     <Container1>
-      {gastronomia.map((prat) => (
-        <ProductPerfil
-          key={prat.cardapio.id}
-          nome={prat.cardapio.nome}
-          preco={prat.cardapio.preco}
-          porcao={prat.cardapio.porcao}
-          descricao={prat.cardapio.descricao}
-          foto={prat.cardapio.foto}
-        />
+      {restaurante.map((prat) => (
+        <li key={prat.cardapio.id}>
+          <ProductPerfil
+            nome={prat.cardapio.nome}
+            preco={prat.cardapio.preco}
+            porcao={prat.cardapio.porcao}
+            descricao={prat.cardapio.descricao}
+            foto={prat.cardapio.foto}
+          />
+        </li>
       ))}
     </Container1>
-  </>
-)
+  )
+}
 export default ListProdutoPerfil
