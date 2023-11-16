@@ -4,6 +4,15 @@ import ListProducts from '../../components/ListProducts'
 import fundo from '../../Assets/fundo.svg'
 import Header from '../../components/Header'
 
+export type CardapioItem = {
+  foto: string
+  preco: number
+  id: number
+  nome: string
+  descricao: string
+  porcao: string
+}
+
 export type Restaurante = {
   image: string
   title: string
@@ -14,20 +23,13 @@ export type Restaurante = {
   avaliacao: number
   descricao: string
   capa: string
-  cardapio: {
-    foto: string
-    preco: number
-    id: number
-    nome: string
-    descricao: string
-    porcao: string
-  }
+  cardapio: CardapioItem[]
 }
 const Home = () => {
   const [restaurante, seRestaurante] = useState<Restaurante[]>([])
 
   useEffect(() => {
-    fetch('https://fake-api-tau.vercel.app/api/efood/restaurantes')
+    fetch(`https://fake-api-tau.vercel.app/api/efood/restaurantes`)
       .then((res) => res.json())
       .then((res) => seRestaurante(res))
   }, [])

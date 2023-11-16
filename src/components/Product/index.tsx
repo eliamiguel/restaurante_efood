@@ -1,5 +1,3 @@
-import { useState } from 'react'
-
 import Button from '../../Buttom'
 import estrela from '../../Assets/estrela.png'
 
@@ -48,7 +46,11 @@ const Product = ({
         </div>
         <Paragrafo>{descricao}</Paragrafo>
 
-        <Button title="Clique aqui para saber mais" type="link" to="/Perfil">
+        <Button
+          title="Clique aqui para saber mais"
+          type="link"
+          to="/Perfil/:id"
+        >
           Saiba mais
         </Button>
       </Container>

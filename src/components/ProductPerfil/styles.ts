@@ -4,7 +4,7 @@ import { ButtonNormal } from '../../Buttom/styles'
 export const Container = styled.div`
   max-width: 1366px;
   width: 320px;
-  border-radius: 10px;
+
   height: 360px;
   padding-bottom: 10px;
   background-color: ${cores.rosa};
@@ -14,7 +14,6 @@ export const Container = styled.div`
   > img {
     width: 100%;
     height: 167px;
-    border-radius: 10px;
   }
 
   div {
@@ -86,7 +85,7 @@ export const Modal = styled.div`
     height: 16px;
   }
   ${ButtonNormal} {
-    width: 218px;
+    width: 235px;
   }
 `
 export const DivModal = styled.div`

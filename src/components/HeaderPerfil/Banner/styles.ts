@@ -1,7 +1,9 @@
 import styled from 'styled-components'
 import { cores } from '../../../styles'
 
-export const ContainerHeader = styled.div`
+export const Image = styled.div`
+  max-width: 2000px;
+  width: 100%;
   height: 280px;
   background-repeat: no-repeat;
   background-size: cover;

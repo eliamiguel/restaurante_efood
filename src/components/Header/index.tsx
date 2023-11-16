@@ -2,9 +2,9 @@ import { CSSProperties } from 'react'
 
 import { Imagem, Paragrafo } from '../../styles'
 import logo from '../../Assets/logo.png'
-type Props = {
+export type Props = {
   style: CSSProperties
-  paragrafo: string
+  paragrafo?: string
   tamanhoImagem?: 'small' | 'big'
 }
 const Header = ({ paragrafo, style }: Props) => {

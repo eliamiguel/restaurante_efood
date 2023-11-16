@@ -10,7 +10,6 @@ export const ButtonLink = styled(Link)`
   padding: 5px;
   margin-left: 8px;
   border: none;
-  border-radius: 5px;
   color: ${cores.rosaClaro};
   background-color: ${cores.rosa};
 `
@@ -24,6 +23,5 @@ export const ButtonNormal = styled.button`
   font-weight: bold;
   border: none;
   color: ${cores.rosa};
-  border-radius: 5px;
   background-color: ${cores.rosaClaro};
 `

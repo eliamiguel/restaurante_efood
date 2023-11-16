@@ -1,27 +1,35 @@
 import { Container1 } from './styles'
 import ProductPerfil from '../ProductPerfil'
 
-import { Restaurante } from '../../pages/Home'
+import { CardapioItem } from '../../pages/Home'
 
 type Props = {
-  restaurante: Restaurante[]
+  cardapio: CardapioItem[]
 }
 
-const ListProdutoPerfil = ({ restaurante }: Props) => {
+const ListProdutoPerfil = ({ cardapio }: Props) => {
+  if (!cardapio) {
+    return <h4>Carregando</h4>
+  }
   return (
-    <Container1>
-      {restaurante.map((prat) => (
-        <li key={prat.cardapio.id}>
-          <ProductPerfil
-            nome={prat.cardapio.nome}
-            preco={prat.cardapio.preco}
-            porcao={prat.cardapio.porcao}
-            descricao={prat.cardapio.descricao}
-            foto={prat.cardapio.foto}
-          />
-        </li>
-      ))}
-    </Container1>
+    <>
+      <Container1>
+        <>
+          {cardapio.map((prato) => (
+            <li key={prato.id}>
+              <ProductPerfil
+                nome={prato.nome}
+                preco={prato.preco}
+                porcao={prato.porcao}
+                descricao={prato.descricao}
+                foto={prato.foto}
+                id={prato.id}
+              />
+            </li>
+          ))}
+        </>
+      </Container1>
+    </>
   )
 }
 export default ListProdutoPerfil

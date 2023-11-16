@@ -9,12 +9,10 @@ export const Container = styled.div`
   background-color: ${cores.branco};
   border: 2px solid ${cores.rosa};
   position: relative;
-  border-radius: 10px;
   > img {
     width: 100%;
     height: 224px;
     object-fit: cover;
-    border-radius: 10px;
   }
 
   div {
@@ -54,7 +52,6 @@ export const Paragrafo = styled.p`
 
 export const ParagrafoTag = styled.p`
   font-size: 12px;
-  border-radius: 5px;
   font-weight: bold;
   padding: 5px;
   height: 26px;
@@ -67,7 +64,7 @@ export const ParagrafoTag = styled.p`
 `
 export const Destaque = styled.p`
   font-size: 12px;
-  border-radius: 5px;
+
   font-weight: bold;
   width: 130px;
   padding: 5px;

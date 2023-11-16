@@ -10,7 +10,12 @@ export type Props = {
   carrinho: string
   paragrafo?: string
 }
-const HeaderPerfil = ({ restaura, carrinho, paragrafo, style }: Props) => (
+export const HeaderPerfil = ({
+  restaura,
+  carrinho,
+  paragrafo,
+  style
+}: Props) => (
   <>
     <Imagem style={style}>
       <div>

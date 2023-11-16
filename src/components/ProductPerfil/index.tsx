@@ -1,6 +1,6 @@
 import Button from '../../Buttom'
 import { useState } from 'react'
-import { Restaurante } from '../../pages/Home'
+import { getDescripion, FormatPrice } from '../../utils'
 
 import {
   ContaineModal,
@@ -12,56 +12,49 @@ import {
 } from './styles'
 
 import fechar from '../../Assets/fechar.png'
-import prato from '../../Assets/Sushi.png'
+
 type Props = {
   nome: string
   descricao: string
   foto: string
   porcao?: string
   preco?: number
-  restaurante?: Restaurante
+  id: number
 }
 
-const ProductPeril = ({ restaurante }: Props) => {
+const ProductPeril = ({ foto, nome, descricao, porcao, preco }: Props) => {
   const [abrirFechar, setAbrirFechar] = useState(false)
   return (
     <>
       <Container>
-        <img src={restaurante?.cardapio.foto} alt="Sushi" />
+        <img src={foto} />
 
         <div>
-          <Title>{restaurante?.cardapio.nome}</Title>
+          <Title>{nome}</Title>
         </div>
-        <Paragrafo>{restaurante?.cardapio.descricao}</Paragrafo>
+        <Paragrafo>{getDescripion(descricao)}</Paragrafo>
         <Button
-          title="Mais detralhes"
+          title="Mais detalhes"
           type="button"
           onClick={() => setAbrirFechar(true)}
         >
-          Mais detralhes
+          Adicionar ao carrinho
         </Button>
       </Container>
 
       <ContaineModal className={abrirFechar ? 'visivel' : ''}>
         <Modal>
-          <img src={prato} alt="imagem da gastronomia" />
+          <img src={foto} alt="imagem da gastronomia" />
           <DivModal>
-            <h3>{'Titulo'}</h3>
+            <h3>{nome}</h3>
             <p>
-              Lorem ipsum dolor, sit amet consectetur adipisicing elit.
-              Inventore fugiat exercitationem provident sed laudantium magni aut
-              atque facilis, omnis rerum, impedit totam deserunt fuga vero quis
-              pariatur adipisci, commodi voluptate! Lorem ipsum dolor sit amet
-              consectetur, adipisicing elit. Doloribus commodi ipsam natus quam
-              aliquid quibusdam et voluptate maxime ipsum reprehenderit,
-              necessitatibus fugit tempore nesciunt, expedita quidem numquam
-              eius impedit iure.
+              {descricao}
               <br />
               <br />
-              <span>Seve: 1 ou 2 pesoas</span>
+              <span>{porcao}</span>
             </p>
             <Button title={'Adicionar ao carrinho'} type="button">
-              Adicionar ao carrinho - R$ 60,90
+              {`Adicionar ao carrinho - R$ ${FormatPrice(preco)}`}
             </Button>
           </DivModal>
           <a href="#">
