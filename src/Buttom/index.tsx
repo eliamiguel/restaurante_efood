@@ -2,7 +2,7 @@ import { ButtonNormal, ButtonLink } from './styles'
 
 type Props = {
   title: string
-  type: 'button' | 'link' | 'submit'
+  type: 'button' | 'link'
   to?: string
   onClick?: () => void
   children: string

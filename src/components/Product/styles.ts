@@ -1,5 +1,5 @@
 import styled from 'styled-components'
-import { cores } from '../../styles'
+import { breakpoint, cores } from '../../styles'
 
 export const Container = styled.div`
   max-width: 1366px;
@@ -13,6 +13,9 @@ export const Container = styled.div`
     width: 100%;
     height: 224px;
     object-fit: cover;
+    @media (max-width: ${breakpoint.desktop}) {
+      height: 200px;
+    }
   }
 
   div {

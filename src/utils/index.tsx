@@ -1,6 +1,6 @@
 export const getDescripion = (descrpion: string) => {
-  if (descrpion.length > 180) {
-    return descrpion.slice(0, 170) + '...'
+  if (descrpion.length > 200) {
+    return descrpion.slice(0, 235) + '...'
   }
 }
 export const FormatPrice = (price = 0) => {

@@ -8,6 +8,11 @@ export const cores = {
   preta: '#000'
 }
 
+export const breakpoint = {
+  desktop: '1024px',
+  tablet: '760px'
+}
+
 export const GlobalStyle = createGlobalStyle`
 *{
   margin: 0;
@@ -31,7 +36,7 @@ export const GlobalStyle = createGlobalStyle`
 
 `
 export const Imagem = styled.div`
-  max-width: 2000px;
+  max-width: 1600px;
   width: 100%;
   height: 298px;
   text-align: center;
@@ -40,7 +45,8 @@ export const Imagem = styled.div`
 
   a,
   img {
-    width: 125px;
+    max-width: 125px;
+    width: 100%;
     heigth: 58px;
   }
   div {
@@ -52,15 +58,23 @@ export const Imagem = styled.div`
       color: ${cores.rosa};
     }
   }
+  @media (max-width: ${breakpoint.desktop}) {
+    height: 280px;
+  }
 `
 export const Paragrafo = styled.p`
   font-size: 36px;
   width: 539px;
-  height: 384px;
+  height: 100px;
   text-align: center;
   margin: 0 auto;
   margin-top: 84px;
   font-weight: bold;
   line-height: 42px;
   color: ${cores.rosa};
+  @media (max-width: ${breakpoint.desktop}) {
+    margin-top: 50px;
+    font-size: 30px;
+    width: 400px;
+  }
 `

@@ -9,6 +9,7 @@ import {
   SemDestaque,
   Title
 } from './styles'
+import { getDescripion } from '../../utils'
 
 export type Props = {
   title: string
@@ -44,7 +45,7 @@ const Product = ({
             <img src={estrela} alt="estrela" />
           </Title>
         </div>
-        <Paragrafo>{descricao}</Paragrafo>
+        <Paragrafo>{getDescripion(descricao)}</Paragrafo>
 
         <Button
           title="Clique aqui para saber mais"

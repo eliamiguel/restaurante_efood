@@ -1,5 +1,3 @@
-import { useEffect, useState } from 'react'
-
 import ListProducts from '../../components/ListProducts'
 import fundo from '../../Assets/fundo.svg'
 import Header from '../../components/Header'
@@ -26,20 +24,13 @@ export type Restaurante = {
   cardapio: CardapioItem[]
 }
 const Home = () => {
-  const [restaurante, seRestaurante] = useState<Restaurante[]>([])
-
-  useEffect(() => {
-    fetch(`https://fake-api-tau.vercel.app/api/efood/restaurantes`)
-      .then((res) => res.json())
-      .then((res) => seRestaurante(res))
-  }, [])
   return (
     <>
       <Header
         style={{ background: `url(${fundo})` }}
         paragrafo={'Viva experiências gastronômicas no conforto da sua casa'}
       />
-      <ListProducts restaurante={restaurante} />
+      <ListProducts />
     </>
   )
 }
