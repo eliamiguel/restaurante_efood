@@ -1,5 +1,5 @@
 import styled from 'styled-components'
-import { cores } from '../../styles'
+import { breakpoint, cores } from '../../styles'
 
 export const Paragrafo = styled.p`
   width: 480px;
@@ -11,6 +11,9 @@ export const Paragrafo = styled.p`
   text-align: center;
   line-heigth: 11px;
   color: ${cores.rosa};
+  @media (max-width: ${breakpoint.tablet}) {
+    width: 400px;
+  }
 `
 export const ImagemFooter = styled.div`
   width: 100px;
@@ -22,5 +25,8 @@ export const ImagemFooter = styled.div`
     height: 24px;
     font-size: 40px;
     margin-right: 8px;
+  }
+  @media (max-width: ${breakpoint.tablet}) {
+    margin-top: 30px;
   }
 `

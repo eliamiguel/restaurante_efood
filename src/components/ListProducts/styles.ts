@@ -18,7 +18,7 @@ export const Container = styled.div`
   }
   @media (max-width: ${breakpoint.desktop}) {
     grid-template-columns: 1fr;
-    max-width: 550px;
-    width: 80%;
+    max-width: 500px;
+    width: 85%;
   }
 `

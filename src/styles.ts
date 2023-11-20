@@ -57,6 +57,9 @@ export const Imagem = styled.div`
     a {
       color: ${cores.rosa};
     }
+    @media (max-width: ${breakpoint.tablet}) {
+      padding-top: 30px;
+    }
   }
   @media (max-width: ${breakpoint.desktop}) {
     height: 280px;
@@ -65,7 +68,7 @@ export const Imagem = styled.div`
 export const Paragrafo = styled.p`
   font-size: 36px;
   width: 539px;
-  height: 100px;
+  height: 130px;
   text-align: center;
   margin: 0 auto;
   margin-top: 84px;
