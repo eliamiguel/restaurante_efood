@@ -12,7 +12,7 @@ export const Paragrafo = styled.p`
   line-heigth: 11px;
   color: ${cores.rosa};
   @media (max-width: ${breakpoint.tablet}) {
-    width: 400px;
+    width: 380px;
   }
 `
 export const ImagemFooter = styled.div`

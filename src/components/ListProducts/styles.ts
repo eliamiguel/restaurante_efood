@@ -16,7 +16,7 @@ export const Container = styled.div`
     row-gap: 30px;
     column-gap: 30px;
   }
-  @media (max-width: ${breakpoint.desktop}) {
+  @media (max-width: ${breakpoint.tablet}) {
     grid-template-columns: 1fr;
     max-width: 500px;
     width: 85%;

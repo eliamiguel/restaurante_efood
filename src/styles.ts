@@ -80,4 +80,9 @@ export const Paragrafo = styled.p`
     font-size: 30px;
     width: 400px;
   }
+  @media (max-width: ${breakpoint.tablet}) {
+    font-size: 25px;
+    line-height: 1.2;
+    width: 370px;
+  }
 `
