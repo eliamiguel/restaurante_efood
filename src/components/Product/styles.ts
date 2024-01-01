@@ -49,10 +49,8 @@ export const Paragrafo = styled.p`
   margin-bottom: 40px;
   font-weight: 400;
   line-height: 22px;
+
   padding: 0 8px;
-  @media (max-width: 768px) {
-    margin-bottom: 55px;
-  }
 `
 
 export const ParagrafoTag = styled.p`

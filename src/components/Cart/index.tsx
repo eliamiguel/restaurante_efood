@@ -1,6 +1,6 @@
 import prato from '../../Assets/perfil/image 3.png'
 import lixeira from '../../Assets/perfil/lixeira.png'
-import Button from '../../Buttom'
+import Button from '../../Buttom/index'
 import {
   CardItem,
   CartContainer,

@@ -21,7 +21,7 @@ export type Restaurante = {
   avaliacao: number
   descricao: string
   capa: string
-  cardapio: CardapioItem[]
+  cardapio?: CardapioItem[]
 }
 const Home = () => {
   return (

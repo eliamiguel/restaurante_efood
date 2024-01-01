@@ -1,4 +1,4 @@
-import Button from '../../Buttom'
+import Button from '../../Buttom/index'
 import estrela from '../../Assets/estrela.png'
 
 import {
@@ -17,6 +17,7 @@ export type Props = {
   image: string
   numeroEstrela?: number
   pais?: string
+  id: number
   destacado: boolean
 }
 
@@ -26,7 +27,8 @@ const Product = ({
   image,
   numeroEstrela,
   destacado,
-  pais
+  pais,
+  id
 }: Props) => {
   return (
     <>

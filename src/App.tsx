@@ -6,6 +6,7 @@ import Rotas from './routs'
 import Cart from './components/Cart'
 import { Provider } from 'react-redux'
 import store from './store'
+import Form from './components/Formulario'
 
 function App() {
   return (
@@ -15,6 +16,7 @@ function App() {
         <Rotas />
         <Footer />
         <Cart />
+        <Form />
       </BrowserRouter>
     </Provider>
   )

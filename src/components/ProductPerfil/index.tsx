@@ -1,4 +1,4 @@
-import Button from '../../Buttom'
+import Button from '../../Buttom/index'
 import { useState } from 'react'
 import { getDescripion, FormatPrice } from '../../utils'
 

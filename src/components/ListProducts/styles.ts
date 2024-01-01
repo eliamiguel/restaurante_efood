@@ -16,9 +16,9 @@ export const Container = styled.div`
     row-gap: 30px;
     column-gap: 30px;
   }
-  @media (max-width: ${breakpoint.tablet}) {
+  @media (max-width: ${breakpoint.desktop}) {
     grid-template-columns: 1fr;
-    max-width: 500px;
-    width: 85%;
+    max-width: 550px;
+    width: 80%;
   }
 `

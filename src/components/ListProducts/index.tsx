@@ -22,6 +22,7 @@ const ListProducts = () => {
                 numeroEstrela={prat.avaliacao}
                 pais={prat.tipo}
                 destacado={prat.destacado}
+                id={prat.id}
               />
             </li>
           ))}

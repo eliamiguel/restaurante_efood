@@ -1,6 +1,6 @@
 import styled from 'styled-components'
 import { cores } from '../../styles'
-import { ButtonLink, ButtonNormal } from '../../Buttom/styles'
+import { ButtonNormal } from '../../Buttom/styles'
 export const Overley = styled.div`
   position: absolute;
   top: 0;

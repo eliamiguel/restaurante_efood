@@ -10,6 +10,7 @@ export const ButtonLink = styled(Link)`
   padding: 5px;
   margin-left: 8px;
   border: none;
+  cursor: pointer;
   color: ${cores.rosaClaro};
   background-color: ${cores.rosa};
 `

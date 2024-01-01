@@ -7,6 +7,7 @@ type Props = {
 }
 
 const ListProdutoPerfil = ({ restaurante }: Props) => {
+  console.log(restaurante)
   if (!restaurante) {
     return <h4>Carregando</h4>
   }
