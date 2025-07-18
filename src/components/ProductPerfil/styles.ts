@@ -1,19 +1,28 @@
 import { styled } from 'styled-components'
-import { cores } from '../../styles'
+import { cores, breakpoint } from '../../styles'
 import { ButtonNormal } from '../../Buttom/styles'
+
 export const Container = styled.div`
   max-width: 1366px;
   width: 320px;
-
-  height: 360px;
+  height: auto;
+  min-height: 360px;
   padding-bottom: 10px;
   background-color: ${cores.rosa};
   border: 4px solid ${cores.rosa};
   position: relative;
 
+  @media (max-width: ${breakpoint.tablet}) {
+    width: 100%;
+    max-width: 400px;
+    margin: 0 auto;
+    min-height: 320px;
+  }
+
   > img {
     width: 100%;
     height: 167px;
+    object-fit: cover;
   }
 
   div {
@@ -44,6 +53,13 @@ export const Paragrafo = styled.p`
   line-height: 22px;
   padding: 8px;
   color: ${cores.rosaClaro};
+  margin-bottom: 16px;
+
+  @media (max-width: ${breakpoint.tablet}) {
+    font-size: 13px;
+    line-height: 20px;
+    padding: 12px 8px;
+  }
 `
 export const ContaineModal = styled.div`
   position: fixed;

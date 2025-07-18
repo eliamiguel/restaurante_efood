@@ -6,6 +6,7 @@ import { useGetRestauranteListQuery } from '../../services/api'
 
 const ListProducts = () => {
   const { data, isLoading } = useGetRestauranteListQuery()
+  console.log(data)
   if (isLoading) {
     return <h2>Carregando...</h2>
   }

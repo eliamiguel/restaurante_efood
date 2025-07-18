@@ -52,7 +52,7 @@ const Product = ({
         <Button
           title="Clique aqui para saber mais"
           type="link"
-          to="/Perfil/:id"
+          to={`/Perfil/${id}`}
         >
           Saiba mais
         </Button>

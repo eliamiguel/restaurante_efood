@@ -30,11 +30,13 @@ export const InputGroup = styled.input`
   margin-top: 8px;
   outline: 2px solid ${cores.rosa};
 `
-export const FormAdress = styled.form`
+
+export const FormPayment = styled.div`
   z-index: 1;
   background-color: ${cores.rosa};
   width: 360px;
   padding: 0 8px;
+
   div {
     width: 345px;
     margin-bottom: 10px;
@@ -42,44 +44,51 @@ export const FormAdress = styled.form`
       width: 100%;
     }
   }
+
   ${ButtonNormal} {
     margin-top: 8px;
     width: 100%;
     margin-left: 0;
   }
+
   @media (max-width: ${breakpoint.tablet}) {
     width: 100%;
   }
 `
+
 export const Title = styled.h3`
   margin-top: 16px;
   margin-bottom: 16px;
-  font-size: 14px;
+  font-size: 16px;
   color: ${cores.branco};
-`
-export const DivInput = styled.div`
-  display: flex;
-  width: 100%;
-  margin-top: 8px;
-  @media (max-width: ${breakpoint.tablet}) {
-    display: block;
-    margin-top: 0;
-  }
+  font-weight: bold;
 `
 
-export const InputNumberNumber = styled.div`
-  display: block;
-`
 export const Label = styled.label`
   display: block;
   color: ${cores.branco};
   font-weight: bold;
   font-size: 14px;
 `
-export const InputNumberCep = styled.div`
-  display: block;
-  margin-left: 32px;
-  @media (max-width: ${breakpoint.tablet}) {
-    margin-left: 0;
+
+export const InputRow = styled.div`
+  display: flex;
+  gap: 8px;
+  align-items: flex-end;
+
+  div {
+    flex: 1;
   }
+
+  @media (max-width: ${breakpoint.tablet}) {
+    flex-direction: column;
+    gap: 0;
+  }
+`
+
+export const TotalValue = styled.div`
+  color: ${cores.branco};
+  font-weight: bold;
+  font-size: 16px;
+  margin-bottom: 16px;
 `

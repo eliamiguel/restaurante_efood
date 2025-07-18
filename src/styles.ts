@@ -36,7 +36,6 @@ export const GlobalStyle = createGlobalStyle`
 
 `
 export const Imagem = styled.div`
-  max-width: 1600px;
   width: 100%;
   height: 298px;
   text-align: center;

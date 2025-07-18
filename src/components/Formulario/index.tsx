@@ -1,6 +1,13 @@
 import Button from '../../Buttom'
 import { useFormik } from 'formik'
 import * as Yup from 'yup'
+import { useSelector, useDispatch } from 'react-redux'
+import { RootReducer } from '../../store'
+import {
+  closeDeliveryForm,
+  open,
+  openPaymentForm
+} from '../../store/reducers/cart'
 import {
   Overley,
   Container,
@@ -14,6 +21,18 @@ import {
 } from './styles'
 
 const Form = () => {
+  const { isDeliveryFormOpen } = useSelector((state: RootReducer) => state.cart)
+  const dispatch = useDispatch()
+
+  const closeForm = () => {
+    dispatch(closeDeliveryForm())
+  }
+
+  const backToCart = () => {
+    dispatch(closeDeliveryForm())
+    dispatch(open())
+  }
+
   const form = useFormik({
     initialValues: {
       QuermRecebera: '',
@@ -50,8 +69,8 @@ const Form = () => {
   })
 
   return (
-    <Container>
-      <Overley />
+    <Container style={{ display: isDeliveryFormOpen ? 'flex' : 'none' }}>
+      <Overley onClick={closeForm} />
 
       <FormAdress>
         <form onSubmit={form.handleSubmit}>
@@ -117,11 +136,19 @@ const Form = () => {
             onBlur={form.handleBlur}
           />
 
-          <Button title="Continuar com o pagamento" type="button">
+          <Button
+            title="Continuar com o pagamento"
+            type="button"
+            onClick={() => dispatch(openPaymentForm())}
+          >
             Continuar com o pagamento
           </Button>
         </form>
-        <Button title="Voltar para o carrinho" type="button">
+        <Button
+          title="Voltar para o carrinho"
+          type="button"
+          onClick={backToCart}
+        >
           Voltar para o carrinho
         </Button>
       </FormAdress>

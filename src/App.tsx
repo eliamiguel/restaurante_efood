@@ -7,6 +7,8 @@ import Cart from './components/Cart'
 import { Provider } from 'react-redux'
 import store from './store'
 import Form from './components/Formulario'
+import PaymentForm from './components/PaymentForm'
+import OrderConfirmation from './components/OrderConfirmation'
 
 function App() {
   return (
@@ -17,6 +19,8 @@ function App() {
         <Footer />
         <Cart />
         <Form />
+        <PaymentForm />
+        <OrderConfirmation />
       </BrowserRouter>
     </Provider>
   )

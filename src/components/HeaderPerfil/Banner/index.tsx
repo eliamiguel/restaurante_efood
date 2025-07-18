@@ -1,5 +1,4 @@
 import { Image, Text, Title } from './styles'
-import { CSSProperties } from 'styled-components'
 
 type Props = {
   image: string

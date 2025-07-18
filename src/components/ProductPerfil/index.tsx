@@ -1,6 +1,8 @@
 import Button from '../../Buttom/index'
 import { useState } from 'react'
 import { getDescripion, FormatPrice } from '../../utils'
+import { useDispatch } from 'react-redux'
+import { add, open } from '../../store/reducers/cart'
 
 import {
   ContaineModal,
@@ -22,8 +24,25 @@ type Props = {
   id: number
 }
 
-const ProductPeril = ({ foto, nome, descricao, porcao, preco }: Props) => {
+const ProductPeril = ({ foto, nome, descricao, porcao, preco, id }: Props) => {
   const [abrirFechar, setAbrirFechar] = useState(false)
+  const dispatch = useDispatch()
+
+  const addToCart = () => {
+    dispatch(
+      add({
+        id,
+        nome,
+        descricao,
+        foto,
+        preco: preco || 0,
+        porcao: porcao || ''
+      })
+    )
+    dispatch(open())
+    setAbrirFechar(false)
+  }
+
   return (
     <>
       <Container>
@@ -53,7 +72,11 @@ const ProductPeril = ({ foto, nome, descricao, porcao, preco }: Props) => {
               <br />
               <span>{porcao}</span>
             </p>
-            <Button title={'Adicionar ao carrinho'} type="button">
+            <Button
+              title={'Adicionar ao carrinho'}
+              type="button"
+              onClick={addToCart}
+            >
               {`Adicionar ao carrinho - R$ ${FormatPrice(preco)}`}
             </Button>
           </DivModal>
