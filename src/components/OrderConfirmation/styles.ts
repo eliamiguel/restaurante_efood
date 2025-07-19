@@ -19,6 +19,10 @@ export const Container = styled.div`
   height: 100%;
   z-index: 1;
   justify-content: flex-end;
+
+  @media (max-width: ${breakpoint.tablet}) {
+    justify-content: center;
+  }
 `
 
 export const ConfirmationModal = styled.div`
@@ -28,6 +32,13 @@ export const ConfirmationModal = styled.div`
   padding: 32px 8px;
   max-height: 100vh;
   overflow-y: auto;
+
+  @media (max-width: ${breakpoint.tablet}) {
+    width: 100%;
+    height: 100%;
+    padding: 16px;
+    max-height: 100vh;
+  }
 
   ${ButtonNormal} {
     margin-top: 24px;

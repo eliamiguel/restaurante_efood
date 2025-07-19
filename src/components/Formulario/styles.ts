@@ -19,6 +19,10 @@ export const Container = styled.div`
   height: 100%;
   z-index: 1;
   justify-content: flex-end;
+
+  @media (max-width: ${breakpoint.tablet}) {
+    justify-content: center;
+  }
 `
 
 export const InputGroup = styled.input`
@@ -35,6 +39,14 @@ export const FormAdress = styled.form`
   background-color: ${cores.rosa};
   width: 360px;
   padding: 0 8px;
+
+  @media (max-width: ${breakpoint.tablet}) {
+    width: 100%;
+    height: 100%;
+    padding: 16px;
+    overflow-y: auto;
+  }
+
   div {
     width: 345px;
     margin-bottom: 10px;
