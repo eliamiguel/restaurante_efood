@@ -71,9 +71,17 @@ export const ContaineModal = styled.div`
   display: none;
   align-items: center;
   justify-content: center;
+
   &.visivel {
     display: flex;
   }
+
+  @media (max-width: ${breakpoint.tablet}) {
+    padding: 16px;
+    align-items: flex-start;
+    padding-top: 60px;
+  }
+
   .overlay {
     position: absolute;
     top: 0;
@@ -90,18 +98,41 @@ export const Modal = styled.div`
   color: ${cores.rosaClaro};
   display: flex;
   z-index: 1;
+
+  @media (max-width: ${breakpoint.tablet}) {
+    width: 90%;
+    max-width: 400px;
+    height: auto;
+    min-height: 400px;
+    flex-direction: column;
+    margin: 20px;
+  }
+
   img {
     width: 280px;
     height: 280px;
     object-fit: cover;
     margin: 32px 32px 32px;
+
+    @media (max-width: ${breakpoint.tablet}) {
+      width: 100%;
+      height: 200px;
+      margin: 16px;
+    }
   }
+
   .img {
     width: 16px;
     height: 16px;
   }
+
   ${ButtonNormal} {
     width: 235px;
+
+    @media (max-width: ${breakpoint.tablet}) {
+      width: 100%;
+      margin: 8px 0;
+    }
   }
 `
 export const DivModal = styled.div`
@@ -110,14 +141,34 @@ export const DivModal = styled.div`
   h3 {
     margin-top: 32px;
     margin-bottom: 16px;
+
+    @media (max-width: ${breakpoint.tablet}) {
+      margin-top: 16px;
+      margin-bottom: 12px;
+      font-size: 16px;
+    }
   }
+
   p {
     width: 600px;
     margin-bottom: 16px;
     display: block;
+
+    @media (max-width: ${breakpoint.tablet}) {
+      width: 100%;
+      font-size: 13px;
+      line-height: 18px;
+      margin-bottom: 12px;
+    }
   }
+
   span {
     margin-top: 16px;
     padding-bottom: 30px;
+
+    @media (max-width: ${breakpoint.tablet}) {
+      margin-top: 12px;
+      padding-bottom: 20px;
+    }
   }
 `
